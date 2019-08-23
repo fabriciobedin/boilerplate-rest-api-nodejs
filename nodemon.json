@@ -1,0 +1,7 @@
+{
+  "env": {
+    "MONGO_CLOUD_PW": "REPLACE_WITH_MONGO_PASSWORD",
+    "JWT_KEY": "REPLEACE_WITH_SOME_BIG_KEY",
+    "PORT": "3000"
+  }
+}

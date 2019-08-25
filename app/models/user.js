@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+const regex = require("../utils/regex");
 
 const userSchema = new Schema(
   {
@@ -10,7 +11,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
       unique: true,
-      match: /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
+      match: regex.email
     },
     password: {
       type: String,

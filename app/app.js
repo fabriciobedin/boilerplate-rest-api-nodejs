@@ -8,13 +8,15 @@ const userRouter = require("./routes/users");
 
 mongoose
   .connect(
-    `mongodb+srv://adminmongo:${
-      process.env.MONGO_CLOUD_PW
-    }@cluster0-vzoaz.gcp.mongodb.net/shop?retryWrites=true&w=majority`,
+    `mongodb+srv://
+    ${process.env.MONGO_CLOUD_USR}:
+    ${process.env.MONGO_CLOUD_PW}@
+    ${process.env.MONGO_CLOUD_ID}.
+    gcp.mongodb.net/databasename?retryWrites=true&w=majority`,
     { useNewUrlParser: true }
   )
   .catch(err => {
-    console.log("Database connection error!" + err);
+    console.log("Database connection error! " + err);
   });
 
 const app = express();
